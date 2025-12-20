@@ -7,7 +7,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
+  <#ai-chat-btn{
+  position:fixed;bottom:20px;right:20px;
+  background:#2b9adf;color:#fff;
+  padding:14px;border-radius:50%;
+  cursor:pointer;font-size:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+#ai-chat-box{
+  position:fixed;bottom:80px;right:20px;
+  width:320px;height:420px;
+  background:#fff;border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  display:none;flex-direction:column;
+}
+.ai-header{
+  padding:12px;font-weight:700;
+  background:#eef8ff;border-radius:14px 14px 0 0;
+}
+#ai-messages{
+  flex:1;padding:10px;overflow-y:auto;font-size:14px;
+}
+.ai-input{display:flex;border-top:1px solid #eee}
+.ai-input input{
+  flex:1;border:none;padding:10px;outline:none
+}
+.ai-input button{
+  border:none;background:#2b9adf;color:#fff;
+  padding:10px 14px;cursor:pointer
+}
+.msg-user{color:#000;margin-bottom:8px}
+.msg-ai{color:#2b9adf;margin-bottom:8px}
+>
     :root{
       --blue-500: #2b9adf;
       --blue-100: #eef8ff;
@@ -89,6 +120,22 @@
   </style>
 </head>
 <body>
+    <script>
+    // existing mobile menu JS
+  </script>
+
+  <!-- 👇 YAHAN paste karo AI chat HTML -->
+  <!-- AI Chat Button -->
+  <div id="ai-chat-btn">💬</div>
+
+  <!-- Chat Box -->
+  <div id="ai-chat-box">
+    ...
+  </div>
+
+</body>
+</html>
+
   <!-- NAV -->
   <header class="nav">
     <div class="brand">
