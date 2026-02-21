@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Async11 — Healing Simplified</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --sage: #7BAE8A;
@@ -186,6 +186,77 @@
     .tech-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
     .tech-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
 
+    /* ===== FOUNDER STORY ===== */
+    .founder-section {
+      background: linear-gradient(135deg, #1C2B20 0%, #2d4a35 100%);
+      padding: 100px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .founder-section::before {
+      content: '"';
+      position: absolute;
+      top: -40px; left: 60px;
+      font-family: 'Playfair Display', serif;
+      font-size: 300px;
+      color: rgba(123,174,138,0.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .founder-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .founder-section .section-tag {
+      background: rgba(123,174,138,0.15);
+      color: var(--sage-light);
+      border: 1px solid rgba(123,174,138,0.2);
+    }
+    .founder-section h2 {
+      color: #fff;
+      font-size: clamp(32px, 3.5vw, 48px);
+      margin-bottom: 36px;
+    }
+    .founder-text {
+      color: rgba(255,255,255,0.8);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+    .founder-text p {
+      margin-bottom: 20px;
+    }
+    .founder-highlight {
+      background: rgba(123,174,138,0.12);
+      border-left: 3px solid var(--sage);
+      padding: 18px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 28px 0;
+      color: #fff;
+      font-size: 18px;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+    }
+    .founder-sig {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .founder-sig strong {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 6px;
+    }
+    .founder-sig span {
+      color: var(--sage-light);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
     /* ===== AUTH SECTION ===== */
     .auth-wrapper {
       display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
@@ -237,17 +308,60 @@
 
     /* ===== FOOTER ===== */
     footer {
-      background: var(--text); color: rgba(255,255,255,0.7);
+      background: #0f0f0f;
+      color: rgba(255,255,255,0.75);
       padding: 60px 80px 32px;
+      font-family: 'DM Sans', sans-serif;
     }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
-    .footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 12px; }
-    .footer-brand span { color: var(--gold); }
-    .footer-desc { font-size: 14px; line-height: 1.7; }
-    .footer-col h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
-    .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .footer-brand-name span { color: var(--gold); }
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .footer-col a, .footer-col p {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
     .footer-col a:hover { color: var(--sage-light); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+    .footer-social-link {
+      display: flex !important;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
 
     /* ===== MOBILE ===== */
     @media (max-width: 900px) {
@@ -259,8 +373,9 @@
       .ai-section { margin: 0 20px; padding: 40px 24px; grid-template-columns: 1fr; }
       .features-grid, .tech-grid, .blog-grid { grid-template-columns: 1fr 1fr; }
       .stats { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
       footer { padding: 40px 24px 24px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .founder-section { padding: 60px 24px; }
     }
     @media (max-width: 560px) {
       .features-grid, .tech-grid, .blog-grid { grid-template-columns: 1fr; }
@@ -276,15 +391,12 @@
     .delay-2 { animation-delay: 0.3s; opacity: 0; }
     .delay-3 { animation-delay: 0.45s; opacity: 0; }
 
-    /* Scroll reveal */
     .reveal { opacity: 0; transform: translateY(24px); transition: all 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* Toast */
     .toast { position: fixed; bottom: 24px; right: 24px; background: var(--text); color: #fff; padding: 14px 20px; border-radius: 14px; font-size: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
     .toast.show { transform: translateY(0); opacity: 1; }
 
-    /* Mobile menu */
     .mobile-menu {
       display: none; position: fixed; top: 65px; left: 0; right: 0;
       background: rgba(255,253,249,0.97); backdrop-filter: blur(16px);
@@ -322,9 +434,9 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left fade-in">
-    <div class="hero-badge">India ka apna mental wellness platform</div>
-    <h1>Sync your Emotions<br>with <em>Async.</em></h1>
-    <p class="hero-sub">Your AI therapist & psychology space — warm, safe, and completely free. Hinglish mein baat karo, bina judgement ke.</p>
+    <div class="hero-badge">India's own mental wellness platform</div>
+    <h1>Sync Your Emotions<br>with <em>Async.</em></h1>
+    <p class="hero-sub">Your AI therapist and psychology space — warm, safe, and completely free. Speak openly, without any judgment.</p>
     <div class="hero-btns">
       <a class="btn-main" href="therapist.html">🤖 Start Free Therapy</a>
       <a class="btn-ghost" href="#techniques">Explore Techniques</a>
@@ -341,9 +453,9 @@
         </div>
       </div>
       <div class="chat-preview">
-        <div class="chat-bubble ai">Namaste! 🙏 Aaj aap kaisa feel kar rahe hain? Mujhe batao, main sun raha hoon.</div>
-        <div class="chat-bubble user">Bohot stressed hoon aaj... kuch samajh nahi aa raha</div>
-        <div class="chat-bubble ai">Understood. Thoda breathe lo 💚 Main yahan hoon aapke saath. Batao kya ho raha hai?</div>
+        <div class="chat-bubble ai">Hello! 🙏 How are you feeling today? Tell me what's on your mind — I'm here to listen.</div>
+        <div class="chat-bubble user">I'm really stressed today... I don't know what to do</div>
+        <div class="chat-bubble ai">I understand. Take a gentle breath 💚 I'm right here with you. Tell me what's going on.</div>
         <div class="typing"><span></span><span></span><span></span></div>
       </div>
       <div class="floating-tag ft2">✦ 100% Private & Safe</div>
@@ -364,39 +476,39 @@
 <section id="features" style="background: var(--warm)">
   <div class="reveal" style="text-align:center">
     <span class="section-tag">Why Async11</span>
-    <h2 style="max-width:500px;margin:0 auto 14px">Everything aapko chahiye, ek jagah</h2>
+    <h2 style="max-width:500px;margin:0 auto 14px">Everything You Need, In One Place</h2>
     <p class="section-sub" style="margin:0 auto 48px">No expensive therapist appointments. No waiting weeks. Instant, warm support in a language that feels like home.</p>
   </div>
   <div class="features-grid reveal">
     <div class="feat-card">
       <div class="feat-icon">🤖</div>
       <h3>AI Therapist</h3>
-      <p>Talk anytime, day or night. Hinglish mein baat karo. Warm, non-judgmental responses powered by advanced AI.</p>
+      <p>Talk anytime, day or night. Speak freely and naturally. Warm, non-judgmental responses powered by advanced AI.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">📊</div>
       <h3>Session Summary</h3>
-      <p>Post-session mein aapko milega ek detailed report — mood tracking, key insights, aur healing progress.</p>
+      <p>After every session, receive a detailed report — mood tracking, key insights, and your healing progress over time.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">🔒</div>
       <h3>100% Private</h3>
-      <p>Your conversations are encrypted and never shared. Aapki baat sirf aapki. Always safe, always confidential.</p>
+      <p>Your conversations are encrypted and never shared. Your words belong only to you. Always safe, always confidential.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">🧠</div>
       <h3>Therapy Techniques</h3>
-      <p>Evidence-based techniques for anxiety, stress & trauma. Step-by-step guides jo aap ghar par use kar sako.</p>
+      <p>Evidence-based techniques for anxiety, stress and trauma. Step-by-step guides you can use from the comfort of home.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">📱</div>
       <h3>Mobile First</h3>
-      <p>Kisi bhi device par kaam karta hai. Kabhi bhi, kahin bhi — jab bhi zaroorat ho, Async11 ready hai.</p>
+      <p>Works on any device. Anytime, anywhere — whenever you need support, Async11 is ready and waiting for you.</p>
     </div>
     <div class="feat-card">
       <div class="feat-icon">💛</div>
       <h3>Human Feel</h3>
-      <p>Sirf jawab nahi — samajh. Our AI is designed to feel like talking to a compassionate friend, not a machine.</p>
+      <p>Not just answers — genuine understanding. Our AI is designed to feel like talking to a compassionate friend, not a machine.</p>
     </div>
   </div>
 </section>
@@ -407,11 +519,11 @@
     <div>
       <span class="section-tag" style="background:rgba(123,174,138,0.2);color:var(--sage-light)">Your AI Companion</span>
       <h2>Meet Your<br>AI Therapist</h2>
-      <p class="section-sub">Koi wait nahi. Koi appointment nahi. Koi judgement nahi. Sirf warmth aur science — 24/7.</p>
+      <p class="section-sub">No waiting. No appointments. No judgment. Just warmth and science — available 24/7.</p>
       <div class="ai-features">
-        <div class="ai-feat">Hinglish mein baat karo — bilkul naturally</div>
+        <div class="ai-feat">Speak naturally — express yourself freely</div>
         <div class="ai-feat">Evidence-based CBT & mindfulness techniques</div>
-        <div class="ai-feat">Session ke baad summary report milegi</div>
+        <div class="ai-feat">Receive a summary report after every session</div>
         <div class="ai-feat">100% encrypted & private conversations</div>
       </div>
       <div style="margin-top:28px">
@@ -427,10 +539,10 @@
         </div>
       </div>
       <div class="chat-preview">
-        <div class="chat-bubble ai" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)">Aaj kaise feel kar rahe hain aap? 😊 Koi bhi baat share kar sakte hain, yahan safe space hai.</div>
-        <div class="chat-bubble user" style="background:var(--sage)">Bohot anxiety ho rahi hai exam ke baare mein...</div>
-        <div class="chat-bubble ai" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)">Samajh sakta hoon. Exam anxiety bahut common hai 💚 Chaliye ek simple breathing exercise karte hain jo abhi help karega...</div>
-        <div class="chat-bubble user" style="background:var(--sage)">Haan, please</div>
+        <div class="chat-bubble ai" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)">How are you feeling today? 😊 You can share anything here — this is a safe and judgment-free space.</div>
+        <div class="chat-bubble user" style="background:var(--sage)">I'm really anxious about my exams...</div>
+        <div class="chat-bubble ai" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)">I completely understand. Exam anxiety is very common 💚 Let's try a simple breathing exercise that can help you right now...</div>
+        <div class="chat-bubble user" style="background:var(--sage)">Yes, please</div>
         <div class="typing" style="background:rgba(255,255,255,0.08)"><span style="background:var(--sage-light)"></span><span style="background:var(--sage-light)"></span><span style="background:var(--sage-light)"></span></div>
       </div>
     </div>
@@ -442,38 +554,61 @@
   <div class="reveal" style="text-align:center">
     <span class="section-tag">Free Tools</span>
     <h2>Therapeutic Techniques</h2>
-    <p class="section-sub" style="margin: 0 auto 48px">Science-backed methods jo aap ghar par try kar sakte hain — guided, simple, and effective.</p>
+    <p class="section-sub" style="margin: 0 auto 48px">Science-backed methods you can try at home — guided, simple, and genuinely effective.</p>
   </div>
   <div class="tech-grid reveal">
     <div class="tech-card">
       <div class="num">01</div>
       <h4>Grounding Technique</h4>
-      <p>Instant calm in 30 seconds. Anxiety aur overwhelm ke liye best exercise.</p>
+      <p>Instant calm in 30 seconds. The best exercise for anxiety and feeling overwhelmed.</p>
     </div>
     <div class="tech-card">
       <div class="num">02</div>
       <h4>5-4-3-2-1 Anxiety Relief</h4>
-      <p>Sensory-based grounding method jo panic attacks ko quickly calm karta hai.</p>
+      <p>A sensory-based grounding method that quickly calms panic attacks and racing thoughts.</p>
     </div>
     <div class="tech-card">
       <div class="num">03</div>
       <h4>Inner Child Healing</h4>
-      <p>Gentle steps to reconnect with and soothe old emotional wounds.</p>
+      <p>Gentle steps to reconnect with and soothe old emotional wounds from the past.</p>
     </div>
     <div class="tech-card">
       <div class="num">04</div>
       <h4>Cognitive Reframing</h4>
-      <p>Negative thoughts ko identify karo aur unhelpful patterns change karo.</p>
+      <p>Identify negative thought patterns and learn to change unhelpful thinking cycles.</p>
     </div>
     <div class="tech-card">
       <div class="num">05</div>
       <h4>Self-Compassion Method</h4>
-      <p>Apne aap ke saath kindness practice karo — simple short exercises.</p>
+      <p>Practice kindness toward yourself — simple, short exercises for everyday use.</p>
     </div>
     <div class="tech-card">
       <div class="num">06</div>
       <h4>Trauma Release Steps</h4>
-      <p>Breathing & movement micro-practices backed by trauma research.</p>
+      <p>Breathing and movement micro-practices backed by trauma-informed research.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER STORY -->
+<section class="founder-section" id="founder">
+  <div class="founder-inner reveal">
+    <span class="section-tag">The Story Behind Async11</span>
+    <h2>Why I Built This</h2>
+    <div class="founder-text">
+      <p>The world is changing faster than we realize, and AI has entered almost every field — except the one that felt sacred: therapy.</p>
+      <p>Psychology teaches us that healing needs human connection, that emotions are understood by people, not machines. I believed that too… until I saw how many people were already sharing their deepest fears with AI tools made for productivity, not pain.</p>
+      <p>That's when I asked myself:</p>
+      <div class="founder-highlight">
+        If people are already turning to AI for comfort, shouldn't that AI actually know how to help?
+      </div>
+      <p>Async11 was created for that need — an AI that isn't just smart, but emotionally trained, psychology-informed, and designed with real therapeutic depth.</p>
+      <p>Not to replace humans, but to support the moments when humans aren't there — late nights, lonely thoughts, and silent struggles.</p>
+      <p>If Async11 can offer clarity when your mind feels heavy, or presence when your heart feels alone, then it is fulfilling its purpose.</p>
+    </div>
+    <div class="founder-sig">
+      <strong>— Rani</strong>
+      <span>B.A. (Hons) Psychology &nbsp;|&nbsp; M.A. Psychology &nbsp;|&nbsp; PGDCFT<br>Founder, Async11.com</span>
     </div>
   </div>
 </section>
@@ -483,8 +618,8 @@
   <div class="auth-wrapper reveal">
     <div class="auth-info">
       <span class="section-tag">Free Account</span>
-      <h3>Join Async11 — Bilkul Free</h3>
-      <p>Sign up karo aur unlock karo: session history, mood tracking, personalized summaries, aur bahut kuch.</p>
+      <h3>Join Async11 — Completely Free</h3>
+      <p>Sign up and unlock: session history, mood tracking, personalized summaries, and so much more.</p>
       <div class="auth-perks">
         <div class="perk"><div class="perk-icon">💬</div>Unlimited AI therapy sessions</div>
         <div class="perk"><div class="perk-icon">📈</div>Mood & progress tracking</div>
@@ -500,14 +635,14 @@
       <div id="loginForm">
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="aapka@email.com" id="loginEmail"/>
+          <input type="email" placeholder="your@email.com" id="loginEmail"/>
         </div>
         <div class="form-group">
           <label>Password</label>
           <input type="password" placeholder="••••••••" id="loginPassword"/>
         </div>
         <button class="btn-form" onclick="handleLogin()">Log In</button>
-        <div class="auth-divider">ya phir</div>
+        <div class="auth-divider">or continue with</div>
         <button class="google-btn" onclick="handleGoogleLogin()">
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Continue with Google
@@ -516,18 +651,18 @@
       <div id="signupForm" style="display:none">
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Aapka naam" id="signupName"/>
+          <input type="text" placeholder="Your name" id="signupName"/>
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="aapka@email.com" id="signupEmail"/>
+          <input type="email" placeholder="your@email.com" id="signupEmail"/>
         </div>
         <div class="form-group">
           <label>Password</label>
           <input type="password" placeholder="Min 8 characters" id="signupPassword"/>
         </div>
         <button class="btn-form" onclick="handleSignup()">Create Free Account</button>
-        <div class="auth-divider">ya phir</div>
+        <div class="auth-divider">or sign up with</div>
         <button class="google-btn" onclick="handleGoogleLogin()">
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Sign Up with Google
@@ -541,32 +676,32 @@
 <section id="blogs">
   <div class="reveal" style="text-align:center">
     <span class="section-tag">Read & Learn</span>
-    <h2>Latest from our Blog</h2>
-    <p class="section-sub" style="margin: 0 auto 48px">Mental health ke baare mein jano — Hindi & English mein.</p>
+    <h2>Latest from Our Blog</h2>
+    <p class="section-sub" style="margin: 0 auto 48px">Learn more about mental health — written with clarity and care.</p>
   </div>
   <div class="blog-grid reveal">
     <div class="blog-card">
       <div class="blog-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">😮‍💨</div>
       <div class="blog-body">
         <span class="blog-tag">Anxiety</span>
-        <h4>2 minutes mein anxiety kaise kam karo</h4>
-        <p style="color:var(--muted);font-size:13px">Quick, proven techniques jo turant relief dete hain...</p>
+        <h4>How to Reduce Anxiety in 2 Minutes</h4>
+        <p style="color:var(--muted);font-size:13px">Quick, proven techniques that provide immediate relief when you need it most...</p>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)">🔥</div>
       <div class="blog-body">
         <span class="blog-tag">Burnout</span>
-        <h4>Emotional burnout kya hota hai?</h4>
-        <p style="color:var(--muted);font-size:13px">Signs, symptoms aur recovery ka poora guide...</p>
+        <h4>What Is Emotional Burnout?</h4>
+        <p style="color:var(--muted);font-size:13px">Signs, symptoms, and a complete guide to recognizing and recovering from burnout...</p>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-img" style="background:linear-gradient(135deg,#fce7f3,#f9a8d4)">🌱</div>
       <div class="blog-body">
         <span class="blog-tag">Healing</span>
-        <h4>Signs that you're healing — slowly but surely</h4>
-        <p style="color:var(--muted);font-size:13px">Healing non-linear hoti hai. Yeh signs batate hain...</p>
+        <h4>Signs That You're Healing — Slowly but Surely</h4>
+        <p style="color:var(--muted);font-size:13px">Healing is non-linear. These signs show you're moving forward even when it doesn't feel like it...</p>
       </div>
     </div>
   </div>
@@ -579,9 +714,9 @@
     <div>
       <span class="section-tag">About Us</span>
       <h2>About Async11</h2>
-      <p style="color:var(--muted);line-height:1.8;font-size:16px;margin-bottom:16px">Async11 ek psychology + AI platform hai jo India ke liye specially banaya gaya hai. Hum believe karte hain ki mental health support sabko milna chahiye — affordable, accessible, aur culturally relevant.</p>
-      <p style="color:var(--muted);line-height:1.8;font-size:16px;margin-bottom:24px">Psychologist Rani ki guidance mein, humne ek aise space banaya hai jo feel hota hai warm, safe, aur genuinely helpful.</p>
-      <a href="mailto:ranisingh1909@gmail.com" style="color:var(--sage);font-weight:600;text-decoration:none">📧 ranisingh1909@gmail.com</a>
+      <p style="color:var(--muted);line-height:1.8;font-size:16px;margin-bottom:16px">Async11 is a psychology and AI platform built specifically for India. We believe that mental health support should be available to everyone — affordable, accessible, and culturally relevant.</p>
+      <p style="color:var(--muted);line-height:1.8;font-size:16px;margin-bottom:24px">Under the guidance of Psychologist Rani, we have created a space that feels warm, safe, and genuinely helpful — a place where healing can truly begin.</p>
+      <a href="mailto:psychologistrani1909@gmail.com" style="color:var(--sage);font-weight:600;text-decoration:none">📧 psychologistrani1909@gmail.com</a>
     </div>
   </div>
 </section>
@@ -590,30 +725,37 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Async<span>11</span></div>
-      <p class="footer-desc">Healing Simplified. India's AI-powered mental wellness platform — warm, safe, and always free.</p>
+      <div class="footer-brand-name">Async<span>11</span>.com</div>
+      <p class="footer-desc">AI Therapist &amp; Psychology Platform.<br>Healing Simplified — warm, safe, and always free.</p>
     </div>
     <div class="footer-col">
-      <h4>Platform</h4>
-      <a href="#">AI Therapist</a>
-      <a href="#">Techniques</a>
-      <a href="#">Session Reports</a>
-      <a href="#">Blog</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="#">About Us</a>
+      <h4>Important Links</h4>
       <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Disclaimer</a>
+      <a href="#about">About Us</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="mailto:ranisingh1909@gmail.com">ranisingh1909@gmail.com</a>
-      <a href="#">Psychologist Rani</a>
+      <h4>Support</h4>
+      <a href="#">Contact</a>
+      <a href="#">AI Safety &amp; Fair Use</a>
+      <a href="#">Mental Health Crisis Guide</a>
+      <a href="#">Data Deletion Request</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect With Us</h4>
+      <a href="https://www.instagram.com/psychologistrani1909/" target="_blank" class="footer-social-link">
+        <span style="font-size:17px">📸</span> Instagram
+      </a>
+      <a href="https://www.youtube.com/@PsychologistRani" target="_blank" class="footer-social-link">
+        <span style="font-size:17px">▶️</span> YouTube
+      </a>
+      <p style="display:flex;align-items:center;gap:8px;"><span style="font-size:17px">✉️</span> Connect@async11.com</p>
+      <p style="display:flex;align-items:center;gap:8px;"><span style="font-size:17px">✉️</span> psychologistrani1909@gmail.com</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Async11 — Healing Simplified.</span>
+    <span>© 2025 Async11.com — Healing Simplified.</span>
     <span>Made with 💚 for India</span>
   </div>
 </footer>
@@ -622,12 +764,10 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  // Mobile menu
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobileMenu').classList.toggle('open');
   });
 
-  // Auth tabs
   function switchTab(tab) {
     document.getElementById('loginForm').style.display = tab === 'login' ? 'block' : 'none';
     document.getElementById('signupForm').style.display = tab === 'signup' ? 'block' : 'none';
@@ -635,7 +775,6 @@
     document.getElementById('signupTab').classList.toggle('active', tab === 'signup');
   }
 
-  // Toast
   function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
@@ -643,18 +782,17 @@
     setTimeout(() => t.classList.remove('show'), 3000);
   }
 
-  // Firebase Auth (will be initialized in firebase-config.js)
   async function handleLogin() {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-    if (!email || !password) { showToast('⚠️ Email aur password dono bharo'); return; }
+    if (!email || !password) { showToast('⚠️ Please enter both email and password'); return; }
     try {
       if (typeof firebase !== 'undefined') {
         await firebase.auth().signInWithEmailAndPassword(email, password);
         showToast('✅ Login successful! Welcome back 🙏');
         setTimeout(() => window.location.href = 'therapist.html', 1500);
       } else {
-        showToast('🔧 Firebase setup zaroori hai — README dekhein');
+        showToast('🔧 Firebase setup required — see README');
       }
     } catch(e) { showToast('❌ ' + e.message); }
   }
@@ -663,8 +801,8 @@
     const name = document.getElementById('signupName').value;
     const email = document.getElementById('signupEmail').value;
     const password = document.getElementById('signupPassword').value;
-    if (!name || !email || !password) { showToast('⚠️ Sab fields bharo'); return; }
-    if (password.length < 8) { showToast('⚠️ Password kam se kam 8 characters ka hona chahiye'); return; }
+    if (!name || !email || !password) { showToast('⚠️ Please fill in all fields'); return; }
+    if (password.length < 8) { showToast('⚠️ Password must be at least 8 characters'); return; }
     try {
       if (typeof firebase !== 'undefined') {
         const cred = await firebase.auth().createUserWithEmailAndPassword(email, password);
@@ -672,10 +810,10 @@
         await firebase.firestore().collection('users').doc(cred.user.uid).set({
           name, email, createdAt: new Date().toISOString(), sessions: 0
         });
-        showToast('🎉 Account ban gaya! Welcome to Async11');
+        showToast('🎉 Account created! Welcome to Async11');
         setTimeout(() => window.location.href = 'therapist.html', 1500);
       } else {
-        showToast('🔧 Firebase setup zaroori hai — README dekhein');
+        showToast('🔧 Firebase setup required — see README');
       }
     } catch(e) { showToast('❌ ' + e.message); }
   }
@@ -685,15 +823,14 @@
       if (typeof firebase !== 'undefined') {
         const provider = new firebase.auth.GoogleAuthProvider();
         await firebase.auth().signInWithPopup(provider);
-        showToast('✅ Google se login ho gaye!');
+        showToast('✅ Signed in with Google!');
         setTimeout(() => window.location.href = 'therapist.html', 1500);
       } else {
-        showToast('🔧 Firebase setup zaroori hai — README dekhein');
+        showToast('🔧 Firebase setup required — see README');
       }
     } catch(e) { showToast('❌ ' + e.message); }
   }
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
